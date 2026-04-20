@@ -1,0 +1,148 @@
+.header {
+  height: var(--header-height);
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  .header-left {
+    .search-bar {
+      position: relative;
+      width: 350px;
+
+      .search-icon {
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--text-muted);
+        font-size: 18px;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px 14px 10px 42px;
+        border-radius: 10px;
+        border: 1px solid var(--border-color);
+        background-color: var(--bg-main);
+        font-size: 14px;
+        transition: all 0.2s;
+
+        &:focus {
+          outline: none;
+          border-color: var(--primary-color);
+          background-color: #ffffff;
+          box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+      }
+    }
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .icon-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: none;
+      background: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: var(--text-secondary);
+      position: relative;
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: var(--bg-main);
+        color: var(--primary-color);
+      }
+
+      .badge {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        min-width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        background-color: var(--primary-color);
+        color: white;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 4px;
+        border: 2px solid #ffffff;
+
+        &.red {
+          background-color: #ef4444;
+        }
+      }
+    }
+
+    .divider {
+      width: 1px;
+      height: 24px;
+      background-color: var(--border-color);
+      margin: 0 12px;
+    }
+
+    .user-profile {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 6px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: var(--bg-main);
+      }
+
+      .avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        overflow: hidden;
+        
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .user-info {
+        display: flex;
+        flex-direction: column;
+
+        .user-name {
+          font-size: 14px;
+          font-weight: 600;
+          color: var(--text-primary);
+        }
+
+        .user-role {
+          font-size: 12px;
+          color: var(--text-muted);
+        }
+      }
+
+      .chevron {
+        color: var(--text-muted);
+        font-size: 14px;
+      }
+    }
+  }
+}

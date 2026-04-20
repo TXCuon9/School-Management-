@@ -1,0 +1,115 @@
+.sidebar {
+  width: var(--sidebar-width);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+
+  .sidebar-header {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    border-bottom: 1px solid var(--border-color);
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      
+      .logo-icon {
+        font-size: 24px;
+      }
+      
+      .logo-text {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--primary-color);
+        letter-spacing: -0.5px;
+      }
+    }
+  }
+
+  .sidebar-nav {
+    flex: 1;
+    padding: 24px 12px;
+    overflow-y: auto;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      li {
+        .nav-link {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 12px 16px;
+          border-radius: 8px;
+          color: var(--text-secondary);
+          font-weight: 500;
+          transition: all 0.2s ease;
+
+          .icon {
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+          }
+
+          &:hover {
+            background-color: var(--bg-main);
+            color: var(--primary-color);
+          }
+
+          &.active {
+            background-color: #eff6ff;
+            color: var(--primary-color);
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar-footer {
+    padding: 24px 12px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .nav-link, .logout-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      color: var(--text-secondary);
+      font-weight: 500;
+      width: 100%;
+      text-align: left;
+      border: none;
+      background: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      .icon {
+        font-size: 20px;
+      }
+
+      &:hover {
+        background-color: var(--bg-main);
+        color: #ef4444; // Red for logout hover
+      }
+    }
+    
+    .logout-btn:hover {
+        background-color: #fef2f2;
+    }
+  }
+}

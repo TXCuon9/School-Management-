@@ -1,0 +1,92 @@
+.login-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #7b5cff, #b3a6ff);
+}
+
+.login-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.input-group-custom {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-group-custom input {
+    width: 100%;
+    padding: 10px 40px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+}
+
+.icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7b5cff;
+}
+
+.eye {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    cursor: pointer;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(to right, #2f5eff, #3f7bff);
+    color: white;
+    font-weight: 500;
+}
+
+.divider {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 14px;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    height: 1px;
+    width: 30%;
+    background: #ddd;
+    position: absolute;
+    top: 50%;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+/* social */
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-login svg {
+    font-size: 20px;
+    cursor: pointer;
+}
